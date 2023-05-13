@@ -1,0 +1,12 @@
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.csproj.AssemblyReference.cache
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.Properties.Resources.resources
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.csproj.GenerateResource.cache
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.csproj.CoreCompileInputs.cache
+C:\Users\Tilek\source\repos\crud\crud\bin\Debug\crud.exe.config
+C:\Users\Tilek\source\repos\crud\crud\bin\Debug\crud.exe
+C:\Users\Tilek\source\repos\crud\crud\bin\Debug\crud.pdb
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.Views.PetView.resources
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.exe
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.pdb
+C:\Users\Tilek\source\repos\crud\crud\obj\Debug\crud.Views.MainView.resources
