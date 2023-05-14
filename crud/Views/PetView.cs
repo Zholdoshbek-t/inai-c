@@ -60,19 +60,64 @@ namespace crud.Views
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
+            tabControl.TabPages.Remove(tabPageDetail);
+            btnClosePetList.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
         {
+            //Search
             btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             txtSearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
-                {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
+            };
+            //Add new
+            btnAdd.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl.TabPages.Remove(tabPageList);
+                tabControl.TabPages.Add(tabPageDetail);
+                tabPageDetail.Text = "Add new pet";
+            };
+            //Edit
+            btnEdit.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl.TabPages.Remove(tabPageList);
+                tabControl.TabPages.Add(tabPageDetail);
+                tabPageDetail.Text = "Edit pet";
+            };
+            //Save changes
+            btnSave.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    tabControl.TabPages.Remove(tabPageDetail);
+                    tabControl.TabPages.Add(tabPageList);
+                }
+                MessageBox.Show(Message);
+            };
+            //Cancel
+            btnCancel.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl.TabPages.Remove(tabPageDetail);
+                tabControl.TabPages.Add(tabPageList);
+            };
+            //Delete
+            btnDelete.Click += delegate
+            {
+                var result = MessageBox.Show("Are you sure you want to delete the selected pet?", "Warning",
+                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
                 }
             };
-
         }
 
         public event EventHandler SearchEvent;
@@ -94,6 +139,8 @@ namespace crud.Views
             {
                 instance = new PetView();
                 instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
             else
             {
@@ -169,6 +216,16 @@ namespace crud.Views
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPageDetail_Click(object sender, EventArgs e)
         {
 
         }

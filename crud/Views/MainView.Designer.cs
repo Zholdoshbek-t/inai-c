@@ -39,7 +39,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
+            this.panel1.Size = new System.Drawing.Size(200, 535);
             this.panel1.TabIndex = 0;
             // 
             // btnPets
@@ -49,14 +49,14 @@
             this.btnPets.Name = "btnPets";
             this.btnPets.Size = new System.Drawing.Size(200, 37);
             this.btnPets.TabIndex = 1;
-            this.btnPets.Text = "Pets";
+            this.btnPets.Text = "Питомцы";
             this.btnPets.UseVisualStyleBackColor = false;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(991, 535);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "MainView";

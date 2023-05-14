@@ -11,7 +11,7 @@ namespace crud.Models
         void Add(PetModel petModel);
         void Edit(PetModel petModel);
         
-        void Delete(PetModel petModel);
+        void Delete(int id);
 
         IEnumerable<PetModel> GetAll();
 
